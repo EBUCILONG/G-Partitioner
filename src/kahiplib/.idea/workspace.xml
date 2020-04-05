@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="KaHIP" targetName="interface_static" />
+      <config projectName="KaHIP" targetName="libmodified_kahip_interface" />
+      <config projectName="KaHIP" targetName="kaffpaE" />
+      <config projectName="KaHIP" targetName="interface" />
+      <config projectName="KaHIP" targetName="libedgelist" />
+      <config projectName="KaHIP" targetName="readbgf" />
+      <config projectName="KaHIP" targetName="graphchecker" />
+      <config projectName="KaHIP" targetName="libgraph2bgf" />
+      <config projectName="KaHIP" targetName="libkaffpa_parallel" />
+      <config projectName="KaHIP" targetName="libmodified_kaffpa" />
+      <config projectName="KaHIP" targetName="libkaffpa" />
+      <config projectName="KaHIP" targetName="libparallel" />
+      <config projectName="KaHIP" targetName="dspac" />
+      <config projectName="KaHIP" targetName="toolbox" />
+      <config projectName="KaHIP" targetName="parhip_interface" />
+      <config projectName="KaHIP" targetName="friendster_list_to_metis_graph" />
+      <config projectName="KaHIP" targetName="parhip" />
+      <config projectName="KaHIP" targetName="interface_test" />
+      <config projectName="KaHIP" targetName="libmapping" />
+      <config projectName="KaHIP" targetName="partition_to_vertex_separator" />
+      <config projectName="KaHIP" targetName="evaluator" />
+      <config projectName="KaHIP" targetName="libspac" />
+      <config projectName="KaHIP" targetName="node_separator" />
+      <config projectName="KaHIP" targetName="libdspac" />
+      <config projectName="KaHIP" targetName="libmodified_kaffpa_async" />
+      <config projectName="KaHIP" targetName="parhip_interface_static" />
+      <config projectName="KaHIP" targetName="edge_list_to_metis_graph" />
+      <config projectName="KaHIP" targetName="label_propagation" />
+      <config projectName="KaHIP" targetName="edge_partitioning" />
+      <config projectName="KaHIP" targetName="graph2binary" />
+      <config projectName="KaHIP" targetName="graph2binary_external" />
+      <config projectName="KaHIP" targetName="kaffpa" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30cfc0e2-2c37-4de1-a4c5-6017828704b4" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1417955520">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.edge_partitioning">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dspac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="dspac" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="dspac">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edge_list_to_metis_graph" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="edge_list_to_metis_graph" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="edge_list_to_metis_graph">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="edge_partitioning" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="edge_partitioning" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="edge_partitioning">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="evaluator" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="evaluator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="evaluator">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="friendster_list_to_metis_graph" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="friendster_list_to_metis_graph" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="friendster_list_to_metis_graph">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graph2binary" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="graph2binary" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="graph2binary">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graph2binary_external" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="graph2binary_external" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="graph2binary_external">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graphchecker" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="graphchecker" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="graphchecker">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="interface" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interface_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="interface_static" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="interface_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="interface_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="interface_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kaffpa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="kaffpa" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="kaffpa">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kaffpaE" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="kaffpaE" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="kaffpaE">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="label_propagation" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="label_propagation" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="label_propagation">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libdspac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libdspac" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libedgelist" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libedgelist" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libgraph2bgf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libgraph2bgf" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libkaffpa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libkaffpa" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libkaffpa_parallel" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libkaffpa_parallel" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libmapping" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libmapping" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libmodified_kaffpa" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libmodified_kaffpa" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libmodified_kaffpa_async" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libmodified_kaffpa_async" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libmodified_kahip_interface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libmodified_kahip_interface" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libparallel" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libparallel" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="libspac" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="libspac" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="node_separator" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="node_separator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="node_separator">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parhip" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="parhip" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="parhip">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parhip_interface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="parhip_interface" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="parhip_interface_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="parhip_interface_static" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="partition_to_vertex_separator" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="partition_to_vertex_separator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="partition_to_vertex_separator">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="readbgf" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="readbgf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="readbgf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="toolbox" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KaHIP" TARGET_NAME="toolbox" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KaHIP" RUN_TARGET_NAME="toolbox">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.edge_partitioning" />
+      <item itemvalue="Application.evaluator" />
+      <item itemvalue="Application.graphchecker" />
+      <item itemvalue="Application.interface" />
+      <item itemvalue="Application.interface_static" />
+      <item itemvalue="Application.interface_test" />
+      <item itemvalue="Application.kaffpa" />
+      <item itemvalue="Application.kaffpaE" />
+      <item itemvalue="Application.label_propagation" />
+      <item itemvalue="Application.libkaffpa" />
+      <item itemvalue="Application.libkaffpa_parallel" />
+      <item itemvalue="Application.libmapping" />
+      <item itemvalue="Application.libspac" />
+      <item itemvalue="Application.node_separator" />
+      <item itemvalue="Application.partition_to_vertex_separator" />
+      <item itemvalue="Application.libmodified_kaffpa" />
+      <item itemvalue="Application.libmodified_kaffpa_async" />
+      <item itemvalue="Application.libmodified_kahip_interface" />
+      <item itemvalue="Application.dspac" />
+      <item itemvalue="Application.edge_list_to_metis_graph" />
+      <item itemvalue="Application.friendster_list_to_metis_graph" />
+      <item itemvalue="Application.graph2binary" />
+      <item itemvalue="Application.graph2binary_external" />
+      <item itemvalue="Application.libdspac" />
+      <item itemvalue="Application.libedgelist" />
+      <item itemvalue="Application.libgraph2bgf" />
+      <item itemvalue="Application.libparallel" />
+      <item itemvalue="Application.parhip" />
+      <item itemvalue="Application.parhip_interface" />
+      <item itemvalue="Application.parhip_interface_static" />
+      <item itemvalue="Application.readbgf" />
+      <item itemvalue="Application.toolbox" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30cfc0e2-2c37-4de1-a4c5-6017828704b4" name="Default Changelist" comment="" />
+      <created>1586080765244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586080765244</updated>
+      <workItem from="1586080767631" duration="269000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="269000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1440" height="782" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

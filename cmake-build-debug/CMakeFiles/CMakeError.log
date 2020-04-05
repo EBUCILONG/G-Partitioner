@@ -1,0 +1,15 @@
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_FNOSTACKLIMITS failed with the following output:
+Change Dir: /Users/oruqimaru/Desktop/FYP/G-Partitioner/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_8b43b/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_8b43b.dir/build.make CMakeFiles/cmTC_8b43b.dir/build
+gmake[1]: Entering directory '/Users/oruqimaru/Desktop/FYP/G-Partitioner/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8b43b.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++    -DCOMPILER_SUPPORTS_FNOSTACKLIMITS -fPIE   -fno-stack-limit -std=c++11 -o CMakeFiles/cmTC_8b43b.dir/src.cxx.o -c /Users/oruqimaru/Desktop/FYP/G-Partitioner/cmake-build-debug/CMakeFiles/CMakeTmp/src.cxx
+clang: error: unknown argument: '-fno-stack-limit'
+gmake[1]: *** [CMakeFiles/cmTC_8b43b.dir/build.make:66: CMakeFiles/cmTC_8b43b.dir/src.cxx.o] Error 1
+gmake[1]: Leaving directory '/Users/oruqimaru/Desktop/FYP/G-Partitioner/cmake-build-debug/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:121: cmTC_8b43b/fast] Error 2
+
+Source file was:
+int main() { return 0; }
