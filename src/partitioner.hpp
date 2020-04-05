@@ -36,13 +36,21 @@ public:
             counter += NUM_SUBBLOCK - 1;
             edges_count.push_back(counter);
         }
-        edges.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
-        weight.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
-        vector<vector<int>> atomic_weight;
-//        atomic_weight.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
-//        for (int i = 0; i < NUM_SUBBLOCK*(NUM_SUBBLOCK - 1); i++){
-//            atomic_weight[i] = 0;
-//        }
+
+        edges.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK-1));
+        for (int i = 0; i < NUM_SUBBLOCK; i++){
+            for (int j = 0; j < NUM_SUBBLOCK; j++){
+                if(j != i) {
+                    edges.push_back(j);
+                }
+            }
+        }
+        assert(edges.size() == NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
+        weight.resize(NUM_SUBBLOCK * NUM_SUBBLOCK);
+        atomic_weight.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
+        for (int i = 0; i < NUM_SUBBLOCK*NUM_SUBBLOCK; i++){
+            weight[i] = 0;
+        }
 
         int num = graph_in.size();
 
@@ -55,15 +63,23 @@ public:
 
             for (int j = 0; j < ins.size(); j++){
                 if(my_hash(ins[j]) != my_cluster){
-                    weight[my_cluster * (NUM_SUBBLOCK - 1) + my_hash(ins[j])] ++;
+                    weight[my_cluster * NUM_SUBBLOCK + my_hash(ins[j])] ++;
                 }
             }
             for (int j = 0; j < ins.size(); j++){
                 if(my_hash(outs[j]) != my_cluster){
-                    weight[my_cluster * (NUM_SUBBLOCK - 1) + my_hash(outs[j])] ++;
+                    weight[my_cluster * NUM_SUBBLOCK + my_hash(outs[j])] ++;
                 }
             }
         }
+        while(true){
+            auto it = find(weight.begin(), weight.end(), 0) != weight.end();
+            if (it == weight.end()){
+                break;
+            }
+            weight.erase(it);
+        }
+        assert(weight.size() == NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
         //        int edge_inserter = 0;
 //        edges_count.push_back(0);
 //        for(int i = 0; i < graph_in.size(); i++){
