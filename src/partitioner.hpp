@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include "kahiplib/interface/kaHIP_interface.h"
 
+#include <omp.h>
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -17,36 +18,76 @@
 
 using namespace std;
 
+#define NUM_SUBBLOCK 1000
+
+int my_hash(int id){
+    return id * 11897 % NUM_SUBBLOCK;
+}
+
 class Partitioner {
 public:
     Partitioner() {
     }
 
     void converDirected(vector<vector<int>>& graph_in, vector<vector<int>>& graph_out, vector<int>& edges, vector<int>& edges_count, vector<int>& weight){
-        int edge_inserter = 0;
         edges_count.push_back(0);
-        for(int i = 0; i < graph_in.size(); i++){
+        int counter = 0;
+        for (int i = 0; i < NUM_SUBBLOCK*(NUM_SUBBLOCK - 1); i++){
+            counter += NUM_SUBBLOCK - 1;
+            edges_count.push_back(counter);
+        }
+        edges.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
+        weight.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
+        vector<vector<int>> atomic_weight;
+//        atomic_weight.resize(NUM_SUBBLOCK * (NUM_SUBBLOCK - 1));
+//        for (int i = 0; i < NUM_SUBBLOCK*(NUM_SUBBLOCK - 1); i++){
+//            atomic_weight[i] = 0;
+//        }
+
+        int num = graph_in.size();
+
+//#pragma omp parallel for
+        for (int i = 0; i < num; i++) {
+            int eweight = 0;
+            int my_cluster = my_hash(i);
             vector<int>& ins = graph_in[i];
             vector<int>& outs = graph_out[i];
+
             for (int j = 0; j < ins.size(); j++){
-                edges.push_back(ins[j]);
-                auto finder = find(outs.begin(), outs.end(), ins[j]);
-                if(finder != outs.end()){
-                    weight.push_back(2);
-                    outs.erase(finder);
-                } else{
-                    weight.push_back(1);
+                if(my_hash(ins[j]) != my_cluster){
+                    weight[my_cluster * (NUM_SUBBLOCK - 1) + my_hash(ins[j])] ++;
                 }
             }
-            edge_inserter += ins.size() + outs.size();
-            edges_count.push_back(edge_inserter);
-            for (int j = 0; j < outs.size(); j++){
-                edges.push_back(outs[j]);
-                weight.push_back(1);
+            for (int j = 0; j < ins.size(); j++){
+                if(my_hash(outs[j]) != my_cluster){
+                    weight[my_cluster * (NUM_SUBBLOCK - 1) + my_hash(outs[j])] ++;
+                }
             }
         }
-        assert(edges.size() == weight.size());
-        assert(edges.size() == edge_inserter);
+        //        int edge_inserter = 0;
+//        edges_count.push_back(0);
+//        for(int i = 0; i < graph_in.size(); i++){
+//            vector<int>& ins = graph_in[i];
+//            vector<int>& outs = graph_out[i];
+//            for (int j = 0; j < ins.size(); j++){
+//                edges.push_back(ins[j]);
+//                auto finder = find(outs.begin(), outs.end(), ins[j]);
+//                if(finder != outs.end()){
+//                    weight.push_back(2);
+//                    outs.erase(finder);
+//                } else{
+//                    weight.push_back(1);
+//                }
+//            }
+//            edge_inserter += ins.size() + outs.size();
+//            edges_count.push_back(edge_inserter);
+//            for (int j = 0; j < outs.size(); j++){
+//                edges.push_back(outs[j]);
+//                weight.push_back(1);
+//            }
+//        }
+//        assert(edges.size() == weight.size());
+//        assert(edges.size() == edge_inserter);
     }
 
     void load_vertex(string in_path, int num){
@@ -71,11 +112,24 @@ public:
     }
 
     void load_weight(string in_path, int num){
+        vector<int> ori_weight;
+        vertex_weights.resize(NUM_SUBBLOCK);
+        for(int i = 0; i < NUM_SUBBLOCK; i++){
+            vertex_weights[i] = 0;
+        }
         int weight = 0;
         ifstream fin(in_path);
         for (int i = 0; i < num; i++){
             fin >> weight;
-            vertex_weights.push_back(weight / 16);
+            ori_weight.push_back(weight / 16);
+        }
+
+        for (int i = 0; i < num; i++){
+            vertex_weights[my_hash(i)] += ori_weight[i];
+        }
+
+        for (int i = 0; i < NUM_SUBBLOCK; i++){
+            vertex_weights[i] /= 10000;
         }
     }
 
