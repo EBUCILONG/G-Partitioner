@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="128" />
-          <entry key="ObjectiveC" value="4277" />
+          <entry key="ObjectiveC" value="4340" />
         </counts>
       </usages-collector>
     </session>
@@ -84,8 +84,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/partitioner.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-564">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="96">
+              <caret line="110" column="30" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+              <folding>
+                <element signature="e#121#140#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -413,12 +416,12 @@
       <option name="presentableId" value="Default" />
       <updated>1586088242051</updated>
       <workItem from="1586088244160" duration="2514000" />
-      <workItem from="1586093803378" duration="11506000" />
+      <workItem from="1586093803378" duration="12161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14020000" />
+    <option name="totallyTimeSpent" value="14675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -492,8 +495,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partitioner.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="96">
+          <caret line="110" column="30" selection-start-line="110" selection-start-column="30" selection-end-line="110" selection-end-column="30" />
+          <folding>
+            <element signature="e#121#140#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
