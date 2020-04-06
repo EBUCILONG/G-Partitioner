@@ -32,6 +32,30 @@ public:
         num_free = length;
     }
 
+
+    int checkCandi(int id){
+        if(flags[id] == -1)
+            return 1;
+        else
+            return 0;
+    }
+
+    void candi(int id){
+        if(flags[id] == 1){
+            cout << "try to candi a nonfree point" << endl;
+            assert(false);
+        }
+        flags[id] = -1;
+    }
+
+    void decandi(int id){
+        if(flags[id] != -1){
+            cout << "try to decandi a noncandi point" << endl;
+            assert(false);
+        }
+        flags[id] = 0;
+    }
+
     int nextFree(){
         for(int i = 0; i < length; i++)
             if(flags[i] == 0)
@@ -46,7 +70,7 @@ public:
     }
 
     void comit(int id){
-        if(flags[id] != 0) {
+        if(flags[id] == 1) {
             cout << "try to comit a nonfree point" << endl;
             assert(0);
         }
@@ -80,12 +104,16 @@ public:
         vector<int>& ins = graph_in[id];
         vector<int>& outs = graph_out[id];
         for (int i = 0; i < ins.size(); i++){
-            if(flag.checkFree(ins[i]))
+            if(flag.checkFree(ins[i]) && flag.checkCandi(ins[i]) != 1) {
                 candidates.push_back(ins[i]);
+                flag.candi(ins[i]);
+            }
         }
         for (int i = 0; i < outs.size(); i++){
-            if(flag.checkFree(outs[i]))
+            if(flag.checkFree(outs[i]) && flag.checkCandi(outs[i]) != 1) {
                 candidates.push_back(outs[i]);
+                flag.candi(outs[i]);
+            }
         }
     }
 
@@ -109,12 +137,16 @@ public:
             vector<int>& ins = graph_in[can_id];
             vector<int>& outs = graph_out[can_id];
             for (int i = 0; i < ins.size(); i++){
-                if(flag.checkFree(ins[i]) && find(candidates.begin(), candidates.end(), ins[i]) == candidates.end())
+                if(flag.checkFree(ins[i]) && flag.checkCandi(ins[i]) != 1) {
                     candidates.push_back(ins[i]);
+                    flag.candi(ins[i]);
+                }
             }
             for (int i = 0; i < outs.size(); i++){
-                if(flag.checkFree(outs[i]) && find(candidates.begin(), candidates.end(), outs[i]) == candidates.end())
+                if(flag.checkFree(outs[i]) && flag.checkCandi(outs[i]) != 1) {
                     candidates.push_back(outs[i]);
+                    flag.candi(outs[i]);
+                }
             }
             candidates.erase(candidates.begin());
         }
@@ -148,8 +180,11 @@ public:
             while(candidates.size() != 0){
                 int min_range = mini((int)threshold - members.size(), (int)candidates.size());
                 range_add(min_range, candidates);
-                if(members.size() >= threshold)
+                if(members.size() >= threshold){
+                    for (int i = 0; i < candidates.size(); i++)
+                        flag.decandi(candidates[i]);
                     break;
+                }
             }
         }
     }
