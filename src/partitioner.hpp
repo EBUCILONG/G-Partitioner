@@ -18,35 +18,38 @@
 
 using namespace std;
 
-int my_hash(int id){
-    return id * 11897 % 1000;
-}
+
 
 class Partitioner {
 public:
-    Partitioner() {
+    Partitioner(int num_ver) {
+        num_vertex = num_ver;
+    }
+
+    int my_hash(int id){
+        return id * 11897 % num_vertex;
     }
 
     void converDirected(vector<vector<int>>& graph_in, vector<vector<int>>& graph_out, vector<int>& edges, vector<int>& edges_count, vector<int>& weight){
         edges_count.push_back(0);
         int counter = 0;
-        for (int i = 0; i < 1000*(1000 - 1); i++){
-            counter += 1000 - 1;
+        for (int i = 0; i < num_vertex*(num_vertex - 1); i++){
+            counter += num_vertex - 1;
             edges_count.push_back(counter);
         }
 
-        edges.resize(1000 * (1000-1));
-        for (int i = 0; i < 1000; i++){
-            for (int j = 0; j < 1000; j++){
+        edges.resize(num_vertex * (num_vertex-1));
+        for (int i = 0; i < num_vertex; i++){
+            for (int j = 0; j < num_vertex; j++){
                 if(j != i) {
                     edges.push_back(j);
                 }
             }
         }
-        assert(edges.size() == 1000 * (1000 - 1));
-        weight.resize(1000 * 1000);
-        atomic_weight.resize(1000 * (1000 - 1));
-        for (int i = 0; i < 1000*1000; i++){
+        assert(edges.size() == num_vertex * (num_vertex - 1));
+        weight.resize(num_vertex * num_vertex);
+        atomic_weight.resize(num_vertex * (num_vertex - 1));
+        for (int i = 0; i < num_vertex*num_vertex; i++){
             weight[i] = 0;
         }
 
@@ -61,12 +64,12 @@ public:
 
             for (int j = 0; j < ins.size(); j++){
                 if(my_hash(ins[j]) != my_cluster){
-                    weight[my_cluster * 1000 + my_hash(ins[j])] ++;
+                    weight[my_cluster * num_vertex + my_hash(ins[j])] ++;
                 }
             }
             for (int j = 0; j < ins.size(); j++){
                 if(my_hash(outs[j]) != my_cluster){
-                    weight[my_cluster * 1000 + my_hash(outs[j])] ++;
+                    weight[my_cluster * num_vertex + my_hash(outs[j])] ++;
                 }
             }
         }
@@ -79,7 +82,7 @@ public:
         }
 
         cout << weight[1] << endl;
-        assert(weight.size() == 1000 * (1000 - 1));
+        assert(weight.size() == num_vertex * (num_vertex - 1));
         //        int edge_inserter = 0;
 //        edges_count.push_back(0);
 //        for(int i = 0; i < graph_in.size(); i++){
@@ -131,8 +134,8 @@ public:
 
     void load_weight(string in_path, int num){
         vector<int> ori_weight;
-        vertex_weights.resize(1000);
-        for(int i = 0; i < 1000; i++){
+        vertex_weights.resize(num_vertex);
+        for(int i = 0; i < num_vertex; i++){
             vertex_weights[i] = 0;
         }
         int weight = 0;
@@ -146,7 +149,7 @@ public:
             vertex_weights[my_hash(i)] += ori_weight[i];
         }
 
-        for (int i = 0; i < 1000; i++){
+        for (int i = 0; i < num_vertex; i++){
             vertex_weights[i] /= 10000;
         }
     }
@@ -185,6 +188,7 @@ public:
     }
 
 private:
+    int num_vertex;
     vector<vector<int>> graph_in;
     vector<vector<int>> graph_out;
     vector<int> vertex_weights;
