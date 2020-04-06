@@ -89,8 +89,24 @@ public:
 
     void range_add(int num, vector<int>& candidates){
         for(int i = 0; i < num; i++){
-            add_memeber(candidates[0], candidates);
-            candidates.erase(candidates.begin());
+//            add_memeber(candidates[0], candidates);
+//            candidates.erase(candidates.begin());
+            flag.comit(candidates[i]);
+            members.push_back(candidates[i]);
+        }
+
+        for(int i = 0; i < num; i++){
+            int can_id = candidates[0];
+            vector<int>& ins = graph_in[can_id];
+            vector<int>& outs = graph_out[can_id];
+            for (int i = 0; i < ins.size(); i++){
+                if(flag.checkFree(ins[i]))
+                    candidates.push_back(ins[i]);
+            }
+            for (int i = 0; i < outs.size(); i++){
+                if(flag.checkFree(outs[i]))
+                    candidates.push_back(outs[i]);
+            }
         }
     }
 
@@ -122,6 +138,8 @@ public:
             while(candidates.size() != 0){
                 int max_range = maxer((int)threshold - members.size(), (int)candidates.size());
                 range_add(max_range, candidates);
+                if(members.size() >= threshold)
+                    break;
             }
         }
     }
