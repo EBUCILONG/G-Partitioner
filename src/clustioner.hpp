@@ -34,7 +34,7 @@ public:
 
     int nextFree(){
         for(int i = 0; i < length; i++)
-            if(flags[i] != 0)
+            if(flags[i] == 0)
                 return i;
     }
 
@@ -69,10 +69,12 @@ public:
 
     void naive_add_member(int id){
         members.push_back(id);
+        cout << "naive" << endl;
         flag.comit(id);
     }
 
     void add_memeber(int id, vector<int>& candidates){
+        cout << "normal add" <<endl;
         members.push_back(id);
         flag.comit(id);
         vector<int>& ins = graph_in[id];
@@ -87,7 +89,14 @@ public:
         }
     }
 
+    void print_members(){
+        for (int i = 0; i < members.size(); i++)
+            cout << members[i] << " ";
+        cout <<endl;
+    }
+
     void range_add(int num, vector<int>& candidates){
+        cout << "range" << endl;
         for(int i = 0; i < num; i++){
 //            add_memeber(candidates[0], candidates);
 //            candidates.erase(candidates.begin());
@@ -100,18 +109,19 @@ public:
             vector<int>& ins = graph_in[can_id];
             vector<int>& outs = graph_out[can_id];
             for (int i = 0; i < ins.size(); i++){
-                if(flag.checkFree(ins[i]))
+                if(flag.checkFree(ins[i]) && find(candidates.begin(), candidates.end(), ins[i]) == candidates.end())
                     candidates.push_back(ins[i]);
             }
             for (int i = 0; i < outs.size(); i++){
-                if(flag.checkFree(outs[i]))
+                if(flag.checkFree(outs[i]) && find(candidates.begin(), candidates.end(), outs[i]) == candidates.end())
                     candidates.push_back(outs[i]);
             }
+            candidates.erase(candidates.begin());
         }
     }
 
-    int maxer(int a, int b){
-        if(a > b)
+    int mini(int a, int b){
+        if(a < b)
             return a;
         else
             return b;
@@ -136,8 +146,8 @@ public:
             int free_seed = flag.nextFree();
             add_memeber(free_seed, candidates);
             while(candidates.size() != 0){
-                int max_range = maxer((int)threshold - members.size(), (int)candidates.size());
-                range_add(max_range, candidates);
+                int min_range = mini((int)threshold - members.size(), (int)candidates.size());
+                range_add(min_range, candidates);
                 if(members.size() >= threshold)
                     break;
             }
