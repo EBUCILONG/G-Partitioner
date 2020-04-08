@@ -293,6 +293,69 @@ public:
         cout << count << endl;
     }
 
+    void load_partition(string in_path){
+        int scaler = 100;
+        vector<int> edges;
+        vector<int> eweights;
+        vector<int> vweights;
+        vector<int> plus_edges_count;
+
+        int sizer = 0;
+        int e_buffer;
+        int ew_buffer;
+        ifstream e_in(in_path + "/edges");
+        e_in >> sizer;
+        for(int i = 0; i < sizer; i++){
+            e_in >> e_buffer;
+            e_in >> ew_buffer;
+            edges.push_back(e_buffer);
+            eweights.push_back(ew_buffer / scaler);
+        }
+        e_in.close();
+
+        ifstream v_in(in_path+ "/vweights");
+        int buffer;
+        for(int i = 0; i < 1000; i++){
+            v_in >> buffer;
+            vweights.push_back(buffer / scaler);
+        }
+        v_in.close();
+
+        ifstream p_in(in_path + "/plus");
+        int p_buffer;
+        for(int i = 0; i < 1001; i++){
+            p_in >> p_buffer;
+            plus_edges_count.push_back(p_buffer);
+        }
+
+        double imbalance = 0.0065;
+        int num_block = 5;
+        int num = 1000;
+        int cut = 0;
+        int* result = (int*) malloc(sizeof(int) * num);
+
+        cout << "start partition" <<endl;
+        kaffpa(&num, vweights.data(), plus_edges_count.data(), eweights.data(), edges.data(), &num_block, &imbalance, false, 0, FAST, &cut, result);
+        ofstream fout(in_path + "/result");
+
+        for(int i =0 ; i< num_vertex; i++){
+            fout << result[i] << endl;
+        }
+
+        fout.close();
+
+        cout << "cut is: " << cut << endl;
+
+        vector<float> evaluator(num_block);
+        for (int i = 0; i < num; i++){
+            evaluator[result[i]] += vweights[i];
+        }
+        cout << "load is:" << endl;
+        for (int i = 0; i < evaluator.size(); i++){
+            cout << evaluator[i] << " ";
+        }
+    }
+
     void partition(string out_path){
         vector<int> edges;
         vector<int> eweights;

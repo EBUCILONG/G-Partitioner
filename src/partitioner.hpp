@@ -154,6 +154,10 @@ public:
         }
     }
 
+    void partition(string in_path){
+        string vwet = in_path + "/"
+    }
+
     void partition(int num_block, string out_path){
         int num_vertex = graph_in.size();
         assert(num_vertex == graph_out.size());
