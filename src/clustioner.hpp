@@ -300,7 +300,7 @@ public:
         vector<int> edges_count;
         vector<int> plus_edges_count;
         plus_edges_count.push_back(0);
-
+        cout << "start convert" << endl;
         for(int my_cluster = 0; my_cluster < 1000; my_cluster++){
             int vweight_count = 0;
             int enumber_count = 0;
@@ -341,11 +341,29 @@ public:
             plus_edges_count.push_back(tiker);
         }
 
+        assert(edges.size() == eweights.size());
+        ofstream edges_out(out_path + "/edges");
+        edges_out << edges.size() << endl;
+        for(int i = 0; i < edges.size(); i++)
+            edges_out << edges[i] << " " << eweights[i] << endl;
+        edges_out.close();
+
+        ofstream vweights_out(out_path + "/vweights");
+        for(int i = 0; i < vweights.size(); i++){
+            vweights_out << vweights[i] << endl;
+        }
+        vweights_out.close();
+
+        ofstream plus_out(out_path+"/plus");
+        for(int i = 0; i < plus_edges_count.size(); i++)
+            plus_out << plus_edges_count[i] << endl;
+
         double imbalance = 0.0065;
         int num_block = 5;
         int num = 1000;
         int cut = 0;
         int* result = (int*) malloc(sizeof(int) * num);
+        cout << "start partition" <<endl;
         kaffpa(&num, vweights.data(), plus_edges_count.data(), eweights.data(), edges.data(), &num_block, &imbalance, false, 0, FAST, &cut, result);
         ofstream fout(out_path + "/result");
 
