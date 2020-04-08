@@ -209,6 +209,8 @@ class Clustioner{
 public:
     Clustioner(int num_v){
         num_vertex = num_v;
+        map.resize(num_vertex);
+        clusters.resize(1000);
     }
 
     void load_vertex(string in_path, int num){
@@ -231,6 +233,18 @@ public:
                 fin >> vid;
                 outs.push_back(vid);
             }
+        }
+    }
+
+     void load_map(string in_path, int num){
+        ifstream fin(in_path);
+        int id_buffer;
+        int bid_buffer;
+        for (int i = 0; i < num; i++){
+            fin >> id_buffer;
+            fin >> bid_buffer;
+            map[id_buffer] = bid_buffer;
+            clusters[bid_buffer].push_back(id_buffer);
         }
     }
 
@@ -278,10 +292,86 @@ public:
 
         cout << count << endl;
     }
+
+    void partition(string out_path){
+        vector<int> edges;
+        vector<int> eweights;
+        vector<int> vweights;
+        vector<int> edges_count;
+        vector<int> plus_edges_count;
+        plus_edges_count.push_back(0);
+
+        for(int my_cluster = 0; my_cluster < 1000; my_cluster++){
+            int vweight_count = 0;
+            int enumber_count = 0;
+            vector<int> eweight(1000, 0);
+            vector<int>& cluster = clusters[my_cluster];
+            for(int j = 0; j < cluster.size(); j++) {
+                vweight_count += vertex_weights[cluster[j]];
+
+                vector<int>& ins = graph_in[cluster[j]];
+                vector<int>& outs = graph_out[cluster[j]];
+                for(int k = 0; k < ins.size(); k++){
+                    int nb_cluster = map[ins[k]];
+                    if(nb_cluster != my_cluster){
+                        eweight[nb_cluster]++;
+                    }
+                }
+                for(int k = 0; k < outs.size(); k++){
+                    int nb_cluster = map[outs[k]];
+                    if(nb_cluster != my_cluster){
+                        eweight[nb_cluster]++;
+                    }
+                }
+            }
+            for(int j = 0; j < eweight.size(); j++){
+                if(eweight[j] > 0){
+                    edges.push_back(j);
+                    eweights.push_back(eweight[j]);
+                    enumber_count++;
+                }
+            }
+            edges_count.push_back(enumber_count);
+            vweights.push_back(vweight_count/1000);
+        }
+
+        int tiker = 0;
+        for(int i = 0; i < edges_count.size(); i++){
+            tiker += edges_count[i];
+            plus_edges_count.push_back(tiker);
+        }
+
+        double imbalance = 0.0065;
+        int num_block = 5;
+        int num = 1000;
+        int cut = 0;
+        int* result = (int*) malloc(sizeof(int) * num);
+        kaffpa(&num, vweights.data(), plus_edges_count.data(), eweights.data(), edges.data(), &num_block, &imbalance, false, 0, FAST, &cut, result);
+        ofstream fout(out_path + "/result");
+
+        for(int i =0 ; i< num_vertex; i++){
+            fout << result[i] << endl;
+        }
+
+        fout.close();
+
+        cout << "cut is: " << cut << endl;
+
+        vector<float> evaluator(num_block);
+        for (int i = 0; i < num; i++){
+            evaluator[result[i]] += vweights[i];
+        }
+        cout << "load is:" << endl;
+        for (int i = 0; i < evaluator.size(); i++){
+            cout << evaluator[i] << " ";
+        }
+    }
 private:
     int num_vertex;
     vector<vector<int>> graph_in;
     vector<vector<int>> graph_out;
+    vector<int> map;
+    vector<vector<int>> clusters;
     vector<int> vertex_weights;
 };
 

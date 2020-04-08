@@ -2,39 +2,39 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="G-Partitioner" targetName="graph2binary" />
-      <config projectName="G-Partitioner" targetName="toolbox" />
-      <config projectName="G-Partitioner" targetName="graph2binary_external" />
-      <config projectName="G-Partitioner" targetName="kaffpa" />
+      <config projectName="G-Partitioner" targetName="interface_test" />
+      <config projectName="G-Partitioner" targetName="libmodified_kahip_interface" />
+      <config projectName="G-Partitioner" targetName="parhip" />
+      <config projectName="G-Partitioner" targetName="friendster_list_to_metis_graph" />
       <config projectName="G-Partitioner" targetName="libgraph2bgf" />
-      <config projectName="G-Partitioner" targetName="label_propagation" />
-      <config projectName="G-Partitioner" targetName="partition" />
+      <config projectName="G-Partitioner" targetName="libedgelist" />
+      <config projectName="G-Partitioner" targetName="libdspac" />
       <config projectName="G-Partitioner" targetName="node_separator" />
-      <config projectName="G-Partitioner" targetName="parhip_interface_static" />
-      <config projectName="G-Partitioner" targetName="libparallel" />
-      <config projectName="G-Partitioner" targetName="edge_list_to_metis_graph" />
       <config projectName="G-Partitioner" targetName="libmodified_kaffpa" />
       <config projectName="G-Partitioner" targetName="evaluator" />
-      <config projectName="G-Partitioner" targetName="libdspac" />
-      <config projectName="G-Partitioner" targetName="parhip_interface" />
-      <config projectName="G-Partitioner" targetName="friendster_list_to_metis_graph" />
-      <config projectName="G-Partitioner" targetName="libmapping" />
-      <config projectName="G-Partitioner" targetName="dspac" />
-      <config projectName="G-Partitioner" targetName="partition_to_vertex_separator" />
-      <config projectName="G-Partitioner" targetName="interface_static" />
-      <config projectName="G-Partitioner" targetName="libmodified_kahip_interface" />
-      <config projectName="G-Partitioner" targetName="interface" />
       <config projectName="G-Partitioner" targetName="readbgf" />
-      <config projectName="G-Partitioner" targetName="edge_partitioning" />
-      <config projectName="G-Partitioner" targetName="libkaffpa" />
+      <config projectName="G-Partitioner" targetName="edge_list_to_metis_graph" />
+      <config projectName="G-Partitioner" targetName="dspac" />
+      <config projectName="G-Partitioner" targetName="label_propagation" />
+      <config projectName="G-Partitioner" targetName="parhip_interface_static" />
       <config projectName="G-Partitioner" targetName="kaffpaE" />
-      <config projectName="G-Partitioner" targetName="libmodified_kaffpa_async" />
       <config projectName="G-Partitioner" targetName="graphchecker" />
+      <config projectName="G-Partitioner" targetName="graph2binary" />
+      <config projectName="G-Partitioner" targetName="libmapping" />
+      <config projectName="G-Partitioner" targetName="interface" />
+      <config projectName="G-Partitioner" targetName="kaffpa" />
+      <config projectName="G-Partitioner" targetName="parhip_interface" />
       <config projectName="G-Partitioner" targetName="libkaffpa_parallel" />
+      <config projectName="G-Partitioner" targetName="edge_partitioning" />
       <config projectName="G-Partitioner" targetName="libspac" />
-      <config projectName="G-Partitioner" targetName="interface_test" />
-      <config projectName="G-Partitioner" targetName="parhip" />
-      <config projectName="G-Partitioner" targetName="libedgelist" />
+      <config projectName="G-Partitioner" targetName="toolbox" />
+      <config projectName="G-Partitioner" targetName="libparallel" />
+      <config projectName="G-Partitioner" targetName="partition" />
+      <config projectName="G-Partitioner" targetName="libmodified_kaffpa_async" />
+      <config projectName="G-Partitioner" targetName="interface_static" />
+      <config projectName="G-Partitioner" targetName="graph2binary_external" />
+      <config projectName="G-Partitioner" targetName="partition_to_vertex_separator" />
+      <config projectName="G-Partitioner" targetName="libkaffpa" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -59,10 +59,10 @@
     <session id="800429728">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -75,7 +75,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="128" />
-          <entry key="ObjectiveC" value="7725" />
+          <entry key="ObjectiveC" value="9246" />
         </counts>
       </usages-collector>
     </session>
@@ -85,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/partitioner.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="376">
+              <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
               <folding>
                 <element signature="e#121#140#0" expanded="true" />
               </folding>
@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/clustioner.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="186" column="17" lean-forward="true" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
+            <state relative-caret-position="211">
+              <caret line="341" column="9" lean-forward="true" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
               <folding>
                 <element signature="e#119#138#0" expanded="true" />
               </folding>
@@ -109,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kahiplib/interface/kaHIP_interface.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="750">
               <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
             </state>
           </provider>
@@ -118,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="330">
               <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
             </state>
           </provider>
@@ -428,18 +428,19 @@
       <option name="presentableId" value="Default" />
       <updated>1586088242051</updated>
       <workItem from="1586088244160" duration="2514000" />
-      <workItem from="1586093803378" duration="22746000" />
+      <workItem from="1586093803378" duration="23238000" />
+      <workItem from="1586346903860" duration="2810000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25260000" />
+    <option name="totallyTimeSpent" value="28562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -481,30 +482,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kahiplib/interface/kaHIP_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/partition.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#44#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/partition.cpp" />
     <entry file="file://$PROJECT_DIR$/src/partition.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -512,10 +490,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/kahiplib/interface/kaHIP_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/partitioner.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="376">
+          <caret line="181" column="35" selection-start-line="181" selection-start-column="35" selection-end-line="181" selection-end-column="35" />
           <folding>
             <element signature="e#121#140#0" expanded="true" />
           </folding>
@@ -524,8 +516,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/clustioner.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="186" column="17" lean-forward="true" selection-start-line="186" selection-start-column="17" selection-end-line="186" selection-end-column="17" />
+        <state relative-caret-position="211">
+          <caret line="341" column="9" lean-forward="true" selection-start-line="341" selection-start-column="9" selection-end-line="341" selection-end-column="9" />
           <folding>
             <element signature="e#119#138#0" expanded="true" />
           </folding>
