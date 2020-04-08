@@ -93,12 +93,10 @@ public:
 
     void naive_add_member(int id){
         members.push_back(id);
-        cout << "naive" << endl;
         flag.comit(id);
     }
 
     void add_memeber(int id, vector<int>& candidates){
-        cout << "normal add" <<endl;
         members.push_back(id);
         flag.comit(id);
         vector<int>& ins = graph_in[id];
@@ -124,7 +122,6 @@ public:
     }
 
     void range_add(int num, vector<int>& candidates){
-        cout << "range" << endl;
         for(int i = 0; i < num; i++){
 //            add_memeber(candidates[0], candidates);
 //            candidates.erase(candidates.begin());
@@ -200,7 +197,6 @@ public:
         return result;
     }
 
-private:
     vector<int> members;
     int threshold;
     vector<vector<int>>& graph_in;
@@ -251,22 +247,36 @@ public:
         fin.close();
     }
 
-    void convertData() {
+    void convertData(string output_path) {
         Flag flag(num_vertex);
+
+        output_path += "/map";
+
+        cout << output_path << endl;
 
         vector<Grow *> growers;
         while (flag.freeNum() != 0) {
             Grow *grow = new Grow(num_vertex, 1000, graph_in, graph_out, flag);
             grow->start_grow();
+            growers.push_back(grow);
+            cout << "growed " << growers.size() << "th and current remain " << flag.freeNum() << "vertices" <<endl;
         }
 
         int count = 0;
+
+        ofstream fout(output_path);
+        for(int i = 0; i < growers.size(); i++){
+            for(int j = 0; j < growers[i]->members.size(); j++)
+                fout << growers[i]->members[j] << " " << i << endl;
+        }
+        fout.close();
 
         for (int i = 0; i < growers.size(); i++) {
             cout << growers[i]->get_size() << endl;
             count += growers[i]->get_size();
         }
 
+        cout << count << endl;
     }
 private:
     int num_vertex;
